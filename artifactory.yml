@@ -1,0 +1,4 @@
+- hosts: jfrog 
+  become: true
+  roles:
+    - artifactory
