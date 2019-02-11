@@ -17,11 +17,8 @@
 - name: artifactory | Getting in to installation directory
   shell: cd /opt/{{ artifactory_version }}/bin
 
-- name: artifactory| check artifactory service and stop
-  shell: bash /opt/{{ artifactory_version }}/bin/artifactoryctl stop
-
-- name: artifactory| Install service
-  shell: cd /opt/{{ artifactory_version }}/bin;sudo ./artifactoryctl start
+- name: artifactory| start artifactory
+  shell: bash /opt/{{ artifactory_version }}/bin/artifactoryctl start
 
   #- name: artifactory | Start/Restart artifactory
   #service: name=artifactory state=started
